@@ -13,7 +13,6 @@ const PORT = process.env.PORT || 5000;
 // Middleware
 app.use(cors({
   origin: 'https://bhawani-caterers.vercel.app',
-  origin: 'http://localhost:5173',
   credentials: true, // important for cookies/auth
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
   allowedHeaders: ['Content-Type', 'Authorization']
