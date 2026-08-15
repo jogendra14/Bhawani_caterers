@@ -1,0 +1,1583 @@
+[
+  {
+    "name": "Steamed Rice",
+    "rawMaterials": [
+      "Basmati Rice",
+      "Salt",
+      "Cooking Oil"
+    ]
+  },
+  {
+    "name": "Jeera Rice",
+    "rawMaterials": [
+      "Basmati Rice",
+      "Cumin Seeds",
+      "Salt",
+      "Cooking Oil"
+    ]
+  },
+  {
+    "name": "Matar Pulao",
+    "rawMaterials": [
+      "Basmati Rice",
+      "Green Peas",
+      "Onion",
+      "Cumin Seeds",
+      "Ginger",
+      "Green Chilli",
+      "Salt",
+      "Cooking Oil"
+    ]
+  },
+  {
+    "name": "Veg Pulao",
+    "rawMaterials": [
+      "Basmati Rice",
+      "Carrot",
+      "Green Peas",
+      "French Beans",
+      "Cauliflower",
+      "Onion",
+      "Ginger",
+      "Garlic",
+      "Green Chilli",
+      "Cumin Seeds",
+      "Salt",
+      "Cooking Oil"
+    ]
+  },
+  {
+    "name": "Vegetable Biryani",
+    "rawMaterials": [
+      "Basmati Rice",
+      "Carrot",
+      "Green Peas",
+      "French Beans",
+      "Cauliflower",
+      "Potato",
+      "Onion",
+      "Tomato",
+      "Ginger",
+      "Garlic",
+      "Green Chilli",
+      "Coriander Leaves",
+      "Mint Leaves",
+      "Biryani Masala",
+      "Red Chilli Powder",
+      "Turmeric Powder",
+      "Cumin Seeds",
+      "Cinnamon",
+      "Cardamom",
+      "Bay Leaf",
+      "Cloves",
+      "Curd",
+      "Salt",
+      "Cooking Oil"
+    ]
+  },
+  {
+    "name": "Dal Rice",
+    "rawMaterials": [
+      "Toor Dal",
+      "Basmati Rice",
+      "Onion",
+      "Tomato",
+      "Garlic",
+      "Ginger",
+      "Green Chilli",
+      "Turmeric Powder",
+      "Red Chilli Powder",
+      "Cumin Seeds",
+      "Salt",
+      "Cooking Oil"
+    ]
+  },
+  {
+    "name": "Dal Fry",
+    "rawMaterials": [
+      "Toor Dal",
+      "Onion",
+      "Tomato",
+      "Garlic",
+      "Ginger",
+      "Green Chilli",
+      "Turmeric Powder",
+      "Red Chilli Powder",
+      "Coriander Powder",
+      "Cumin Seeds",
+      "Coriander Leaves",
+      "Salt",
+      "Cooking Oil"
+    ]
+  },
+  {
+    "name": "Tadka Dal",
+    "rawMaterials": [
+      "Toor Dal",
+      "Onion",
+      "Tomato",
+      "Garlic",
+      "Ginger",
+      "Green Chilli",
+      "Turmeric Powder",
+      "Red Chilli Powder",
+      "Cumin Seeds",
+      "Asafoetida",
+      "Coriander Leaves",
+      "Salt",
+      "Cooking Oil"
+    ]
+  },
+  {
+    "name": "Dal Makhani",
+    "rawMaterials": [
+      "Whole Urad Dal",
+      "Rajma",
+      "Tomato",
+      "Onion",
+      "Ginger",
+      "Garlic",
+      "Green Chilli",
+      "Butter",
+      "Cream",
+      "Red Chilli Powder",
+      "Garam Masala",
+      "Coriander Leaves",
+      "Salt"
+    ]
+  },
+  {
+    "name": "Moong Dal Tadka",
+    "rawMaterials": [
+      "Moong Dal",
+      "Onion",
+      "Tomato",
+      "Garlic",
+      "Ginger",
+      "Green Chilli",
+      "Turmeric Powder",
+      "Red Chilli Powder",
+      "Cumin Seeds",
+      "Asafoetida",
+      "Coriander Leaves",
+      "Salt",
+      "Cooking Oil"
+    ]
+  },
+  {
+    "name": "Masoor Dal",
+    "rawMaterials": [
+      "Masoor Dal",
+      "Onion",
+      "Tomato",
+      "Garlic",
+      "Ginger",
+      "Green Chilli",
+      "Turmeric Powder",
+      "Red Chilli Powder",
+      "Cumin Seeds",
+      "Coriander Leaves",
+      "Salt",
+      "Cooking Oil"
+    ]
+  },
+  {
+    "name": "Chana Dal Fry",
+    "rawMaterials": [
+      "Chana Dal",
+      "Onion",
+      "Tomato",
+      "Garlic",
+      "Ginger",
+      "Green Chilli",
+      "Turmeric Powder",
+      "Red Chilli Powder",
+      "Cumin Seeds",
+      "Coriander Leaves",
+      "Salt",
+      "Cooking Oil"
+    ]
+  },
+  {
+    "name": "Rajma Masala",
+    "rawMaterials": [
+      "Rajma",
+      "Onion",
+      "Tomato",
+      "Ginger",
+      "Garlic",
+      "Green Chilli",
+      "Turmeric Powder",
+      "Red Chilli Powder",
+      "Coriander Powder",
+      "Garam Masala",
+      "Coriander Leaves",
+      "Salt",
+      "Cooking Oil"
+    ]
+  },
+  {
+    "name": "Chana Masala",
+    "rawMaterials": [
+      "Kabuli Chana",
+      "Onion",
+      "Tomato",
+      "Ginger",
+      "Garlic",
+      "Green Chilli",
+      "Turmeric Powder",
+      "Red Chilli Powder",
+      "Coriander Powder",
+      "Chana Masala",
+      "Cumin Seeds",
+      "Coriander Leaves",
+      "Salt",
+      "Cooking Oil"
+    ]
+  },
+  {
+    "name": "Aloo Jeera",
+    "rawMaterials": [
+      "Potato",
+      "Cumin Seeds",
+      "Green Chilli",
+      "Red Chilli Powder",
+      "Turmeric Powder",
+      "Coriander Powder",
+      "Coriander Leaves",
+      "Salt",
+      "Cooking Oil"
+    ]
+  },
+  {
+    "name": "Aloo Matar",
+    "rawMaterials": [
+      "Potato",
+      "Green Peas",
+      "Onion",
+      "Tomato",
+      "Ginger",
+      "Garlic",
+      "Green Chilli",
+      "Turmeric Powder",
+      "Red Chilli Powder",
+      "Coriander Powder",
+      "Garam Masala",
+      "Coriander Leaves",
+      "Salt",
+      "Cooking Oil"
+    ]
+  },
+  {
+    "name": "Aloo Gobi",
+    "rawMaterials": [
+      "Potato",
+      "Cauliflower",
+      "Onion",
+      "Tomato",
+      "Ginger",
+      "Garlic",
+      "Green Chilli",
+      "Turmeric Powder",
+      "Red Chilli Powder",
+      "Coriander Powder",
+      "Cumin Seeds",
+      "Coriander Leaves",
+      "Salt",
+      "Cooking Oil"
+    ]
+  },
+  {
+    "name": "Aloo Tamatar",
+    "rawMaterials": [
+      "Potato",
+      "Tomato",
+      "Onion",
+      "Ginger",
+      "Garlic",
+      "Green Chilli",
+      "Turmeric Powder",
+      "Red Chilli Powder",
+      "Coriander Powder",
+      "Cumin Seeds",
+      "Coriander Leaves",
+      "Salt",
+      "Cooking Oil"
+    ]
+  },
+  {
+    "name": "Mix Veg",
+    "rawMaterials": [
+      "Carrot",
+      "Green Peas",
+      "French Beans",
+      "Cauliflower",
+      "Potato",
+      "Capsicum",
+      "Onion",
+      "Tomato",
+      "Ginger",
+      "Garlic",
+      "Green Chilli",
+      "Turmeric Powder",
+      "Red Chilli Powder",
+      "Coriander Powder",
+      "Garam Masala",
+      "Coriander Leaves",
+      "Salt",
+      "Cooking Oil"
+    ]
+  },
+  {
+    "name": "Veg Kolhapuri",
+    "rawMaterials": [
+      "Carrot",
+      "Green Peas",
+      "French Beans",
+      "Cauliflower",
+      "Potato",
+      "Capsicum",
+      "Onion",
+      "Tomato",
+      "Ginger",
+      "Garlic",
+      "Green Chilli",
+      "Red Chilli Powder",
+      "Coriander Powder",
+      "Garam Masala",
+      "Coriander Leaves",
+      "Salt",
+      "Cooking Oil"
+    ]
+  },
+  {
+    "name": "Kadhai Vegetable",
+    "rawMaterials": [
+      "Capsicum",
+      "Onion",
+      "Tomato",
+      "Carrot",
+      "Green Peas",
+      "French Beans",
+      "Ginger",
+      "Garlic",
+      "Green Chilli",
+      "Kadhai Masala",
+      "Red Chilli Powder",
+      "Coriander Powder",
+      "Coriander Leaves",
+      "Salt",
+      "Cooking Oil"
+    ]
+  },
+  {
+    "name": "Bhindi Masala",
+    "rawMaterials": [
+      "Lady Finger",
+      "Onion",
+      "Tomato",
+      "Ginger",
+      "Garlic",
+      "Green Chilli",
+      "Turmeric Powder",
+      "Red Chilli Powder",
+      "Coriander Powder",
+      "Cumin Seeds",
+      "Amchur Powder",
+      "Coriander Leaves",
+      "Salt",
+      "Cooking Oil"
+    ]
+  },
+  {
+    "name": "Baingan Masala",
+    "rawMaterials": [
+      "Brinjal",
+      "Onion",
+      "Tomato",
+      "Ginger",
+      "Garlic",
+      "Green Chilli",
+      "Turmeric Powder",
+      "Red Chilli Powder",
+      "Coriander Powder",
+      "Garam Masala",
+      "Coriander Leaves",
+      "Salt",
+      "Cooking Oil"
+    ]
+  },
+  {
+    "name": "Palak Corn",
+    "rawMaterials": [
+      "Spinach",
+      "Sweet Corn",
+      "Onion",
+      "Tomato",
+      "Ginger",
+      "Garlic",
+      "Green Chilli",
+      "Cream",
+      "Garam Masala",
+      "Red Chilli Powder",
+      "Salt",
+      "Cooking Oil"
+    ]
+  },
+  {
+    "name": "Matar Mushroom",
+    "rawMaterials": [
+      "Mushroom",
+      "Green Peas",
+      "Onion",
+      "Tomato",
+      "Ginger",
+      "Garlic",
+      "Green Chilli",
+      "Turmeric Powder",
+      "Red Chilli Powder",
+      "Coriander Powder",
+      "Garam Masala",
+      "Coriander Leaves",
+      "Salt",
+      "Cooking Oil"
+    ]
+  },
+  {
+    "name": "Shahi Paneer",
+    "rawMaterials": [
+      "Paneer",
+      "Onion",
+      "Tomato",
+      "Cashew",
+      "Cream",
+      "Butter",
+      "Ginger",
+      "Garlic",
+      "Green Chilli",
+      "Garam Masala",
+      "Red Chilli Powder",
+      "Coriander Leaves",
+      "Salt"
+    ]
+  },
+  {
+    "name": "Paneer Butter Masala",
+    "rawMaterials": [
+      "Paneer",
+      "Tomato",
+      "Butter",
+      "Cream",
+      "Cashew",
+      "Onion",
+      "Ginger",
+      "Garlic",
+      "Garam Masala",
+      "Red Chilli Powder",
+      "Coriander Leaves",
+      "Salt"
+    ]
+  },
+  {
+    "name": "Kadhai Paneer",
+    "rawMaterials": [
+      "Paneer",
+      "Capsicum",
+      "Onion",
+      "Tomato",
+      "Ginger",
+      "Garlic",
+      "Green Chilli",
+      "Kadhai Masala",
+      "Red Chilli Powder",
+      "Coriander Powder",
+      "Coriander Leaves",
+      "Salt",
+      "Cooking Oil"
+    ]
+  },
+  {
+    "name": "Palak Paneer",
+    "rawMaterials": [
+      "Paneer",
+      "Spinach",
+      "Onion",
+      "Tomato",
+      "Ginger",
+      "Garlic",
+      "Green Chilli",
+      "Cream",
+      "Garam Masala",
+      "Salt",
+      "Cooking Oil"
+    ]
+  },
+  {
+    "name": "Matar Paneer",
+    "rawMaterials": [
+      "Paneer",
+      "Green Peas",
+      "Onion",
+      "Tomato",
+      "Ginger",
+      "Garlic",
+      "Green Chilli",
+      "Turmeric Powder",
+      "Red Chilli Powder",
+      "Coriander Powder",
+      "Garam Masala",
+      "Coriander Leaves",
+      "Salt",
+      "Cooking Oil"
+    ]
+  },
+  {
+    "name": "Paneer Do Pyaza",
+    "rawMaterials": [
+      "Paneer",
+      "Onion",
+      "Tomato",
+      "Capsicum",
+      "Ginger",
+      "Garlic",
+      "Green Chilli",
+      "Coriander Powder",
+      "Red Chilli Powder",
+      "Garam Masala",
+      "Coriander Leaves",
+      "Salt",
+      "Cooking Oil"
+    ]
+  },
+  {
+    "name": "Malai Kofta",
+    "rawMaterials": [
+      "Paneer",
+      "Potato",
+      "Cashew",
+      "Cream",
+      "Onion",
+      "Tomato",
+      "Ginger",
+      "Garlic",
+      "Green Chilli",
+      "Garam Masala",
+      "Red Chilli Powder",
+      "Salt",
+      "Cooking Oil"
+    ]
+  },
+  {
+    "name": "Mushroom Masala",
+    "rawMaterials": [
+      "Mushroom",
+      "Onion",
+      "Tomato",
+      "Ginger",
+      "Garlic",
+      "Green Chilli",
+      "Turmeric Powder",
+      "Red Chilli Powder",
+      "Coriander Powder",
+      "Garam Masala",
+      "Coriander Leaves",
+      "Salt",
+      "Cooking Oil"
+    ]
+  },
+  {
+    "name": "Palak Mushroom",
+    "rawMaterials": [
+      "Spinach",
+      "Mushroom",
+      "Onion",
+      "Tomato",
+      "Ginger",
+      "Garlic",
+      "Green Chilli",
+      "Cream",
+      "Garam Masala",
+      "Salt",
+      "Cooking Oil"
+    ]
+  },
+  {
+    "name": "Chole Paneer",
+    "rawMaterials": [
+      "Kabuli Chana",
+      "Paneer",
+      "Onion",
+      "Tomato",
+      "Ginger",
+      "Garlic",
+      "Green Chilli",
+      "Chana Masala",
+      "Red Chilli Powder",
+      "Coriander Powder",
+      "Coriander Leaves",
+      "Salt",
+      "Cooking Oil"
+    ]
+  },
+  {
+    "name": "Navratan Korma",
+    "rawMaterials": [
+      "Paneer",
+      "Carrot",
+      "Green Peas",
+      "French Beans",
+      "Cauliflower",
+      "Cashew",
+      "Almond",
+      "Cream",
+      "Onion",
+      "Tomato",
+      "Ginger",
+      "Garlic",
+      "Garam Masala",
+      "Salt",
+      "Cooking Oil"
+    ]
+  },
+  {
+    "name": "Butter Roti",
+    "rawMaterials": [
+      "Atta",
+      "Butter",
+      "Salt"
+    ]
+  },
+  {
+    "name": "Tandoori Roti",
+    "rawMaterials": [
+      "Atta",
+      "Salt",
+      "Cooking Oil"
+    ]
+  },
+  {
+    "name": "Plain Naan",
+    "rawMaterials": [
+      "Maida",
+      "Curd",
+      "Salt",
+      "Sugar",
+      "Baking Powder",
+      "Cooking Oil"
+    ]
+  },
+  {
+    "name": "Butter Naan",
+    "rawMaterials": [
+      "Maida",
+      "Curd",
+      "Salt",
+      "Sugar",
+      "Baking Powder",
+      "Butter"
+    ]
+  },
+  {
+    "name": "Garlic Naan",
+    "rawMaterials": [
+      "Maida",
+      "Curd",
+      "Salt",
+      "Sugar",
+      "Baking Powder",
+      "Garlic",
+      "Coriander Leaves",
+      "Butter"
+    ]
+  },
+  {
+    "name": "Cheese Naan",
+    "rawMaterials": [
+      "Maida",
+      "Curd",
+      "Cheese",
+      "Salt",
+      "Sugar",
+      "Baking Powder",
+      "Butter"
+    ]
+  },
+  {
+    "name": "Lachha Paratha",
+    "rawMaterials": [
+      "Atta",
+      "Salt",
+      "Butter",
+      "Cooking Oil"
+    ]
+  },
+  {
+    "name": "Aloo Paratha",
+    "rawMaterials": [
+      "Atta",
+      "Potato",
+      "Onion",
+      "Green Chilli",
+      "Coriander Leaves",
+      "Red Chilli Powder",
+      "Coriander Powder",
+      "Amchur Powder",
+      "Salt",
+      "Butter"
+    ]
+  },
+  {
+    "name": "Puri",
+    "rawMaterials": [
+      "Atta",
+      "Salt",
+      "Cooking Oil"
+    ]
+  },
+  {
+    "name": "Bhatura",
+    "rawMaterials": [
+      "Maida",
+      "Curd",
+      "Baking Powder",
+      "Baking Soda",
+      "Salt",
+      "Cooking Oil"
+    ]
+  },
+  {
+    "name": "Poori Bhaji",
+    "rawMaterials": [
+      "Atta",
+      "Potato",
+      "Onion",
+      "Green Chilli",
+      "Coriander Leaves",
+      "Turmeric Powder",
+      "Red Chilli Powder",
+      "Cumin Seeds",
+      "Salt",
+      "Cooking Oil"
+    ]
+  },
+  {
+    "name": "Vegetable Manchurian",
+    "rawMaterials": [
+      "Cabbage",
+      "Carrot",
+      "Capsicum",
+      "Corn Flour",
+      "Maida",
+      "Garlic",
+      "Ginger",
+      "Green Chilli",
+      "Soy Sauce",
+      "Red Chilli Sauce",
+      "Tomato Ketchup",
+      "Vinegar",
+      "Black Pepper",
+      "Salt",
+      "Cooking Oil"
+    ]
+  },
+  {
+    "name": "Chilli Paneer",
+    "rawMaterials": [
+      "Paneer",
+      "Capsicum",
+      "Onion",
+      "Corn Flour",
+      "Maida",
+      "Garlic",
+      "Ginger",
+      "Green Chilli",
+      "Soy Sauce",
+      "Red Chilli Sauce",
+      "Vinegar",
+      "Chilli Flakes",
+      "Salt",
+      "Cooking Oil"
+    ]
+  },
+  {
+    "name": "Chilli Mushroom",
+    "rawMaterials": [
+      "Mushroom",
+      "Capsicum",
+      "Onion",
+      "Corn Flour",
+      "Garlic",
+      "Ginger",
+      "Green Chilli",
+      "Soy Sauce",
+      "Red Chilli Sauce",
+      "Vinegar",
+      "Black Pepper",
+      "Salt",
+      "Cooking Oil"
+    ]
+  },
+  {
+    "name": "Hakka Noodles",
+    "rawMaterials": [
+      "Noodles",
+      "Cabbage",
+      "Carrot",
+      "Capsicum",
+      "Onion",
+      "Garlic",
+      "Ginger",
+      "Green Chilli",
+      "Soy Sauce",
+      "Red Chilli Sauce",
+      "Vinegar",
+      "Black Pepper",
+      "Salt",
+      "Cooking Oil"
+    ]
+  },
+  {
+    "name": "Schezwan Noodles",
+    "rawMaterials": [
+      "Noodles",
+      "Cabbage",
+      "Carrot",
+      "Capsicum",
+      "Onion",
+      "Garlic",
+      "Ginger",
+      "Green Chilli",
+      "Schezwan Sauce",
+      "Soy Sauce",
+      "Vinegar",
+      "Black Pepper",
+      "Salt",
+      "Cooking Oil"
+    ]
+  },
+  {
+    "name": "Veg Fried Rice",
+    "rawMaterials": [
+      "Basmati Rice",
+      "Carrot",
+      "Green Peas",
+      "Capsicum",
+      "Cabbage",
+      "Onion",
+      "Garlic",
+      "Ginger",
+      "Green Chilli",
+      "Soy Sauce",
+      "Vinegar",
+      "Black Pepper",
+      "Salt",
+      "Cooking Oil"
+    ]
+  },
+  {
+    "name": "Schezwan Fried Rice",
+    "rawMaterials": [
+      "Basmati Rice",
+      "Carrot",
+      "Green Peas",
+      "Capsicum",
+      "Cabbage",
+      "Onion",
+      "Garlic",
+      "Ginger",
+      "Schezwan Sauce",
+      "Soy Sauce",
+      "Vinegar",
+      "Black Pepper",
+      "Salt",
+      "Cooking Oil"
+    ]
+  },
+  {
+    "name": "Spring Roll",
+    "rawMaterials": [
+      "Maida",
+      "Cabbage",
+      "Carrot",
+      "Capsicum",
+      "Onion",
+      "Garlic",
+      "Ginger",
+      "Soy Sauce",
+      "Red Chilli Sauce",
+      "Black Pepper",
+      "Salt",
+      "Cooking Oil"
+    ]
+  },
+  {
+    "name": "Veg Cutlet",
+    "rawMaterials": [
+      "Potato",
+      "Carrot",
+      "Green Peas",
+      "French Beans",
+      "Bread Crumbs",
+      "Green Chilli",
+      "Ginger",
+      "Coriander Leaves",
+      "Red Chilli Powder",
+      "Garam Masala",
+      "Salt",
+      "Cooking Oil"
+    ]
+  },
+  {
+    "name": "Aloo Tikki",
+    "rawMaterials": [
+      "Potato",
+      "Bread Crumbs",
+      "Green Chilli",
+      "Ginger",
+      "Coriander Leaves",
+      "Red Chilli Powder",
+      "Cumin Powder",
+      "Amchur Powder",
+      "Salt",
+      "Cooking Oil"
+    ]
+  },
+  {
+    "name": "Hara Bhara Kabab",
+    "rawMaterials": [
+      "Spinach",
+      "Green Peas",
+      "Potato",
+      "Bread Crumbs",
+      "Green Chilli",
+      "Ginger",
+      "Coriander Leaves",
+      "Garam Masala",
+      "Cumin Powder",
+      "Salt",
+      "Cooking Oil"
+    ]
+  },
+  {
+    "name": "Paneer Tikka",
+    "rawMaterials": [
+      "Paneer",
+      "Capsicum",
+      "Onion",
+      "Curd",
+      "Ginger",
+      "Garlic",
+      "Red Chilli Powder",
+      "Turmeric Powder",
+      "Coriander Powder",
+      "Garam Masala",
+      "Cumin Powder",
+      "Lemon Juice",
+      "Salt",
+      "Cooking Oil"
+    ]
+  },
+  {
+    "name": "Tandoori Mushroom",
+    "rawMaterials": [
+      "Mushroom",
+      "Curd",
+      "Ginger",
+      "Garlic",
+      "Red Chilli Powder",
+      "Turmeric Powder",
+      "Coriander Powder",
+      "Garam Masala",
+      "Cumin Powder",
+      "Lemon Juice",
+      "Salt",
+      "Cooking Oil"
+    ]
+  },
+  {
+    "name": "Dahi Puri",
+    "rawMaterials": [
+      "Boondi",
+      "Curd",
+      "Potato",
+      "Onion",
+      "Tomato",
+      "Coriander Leaves",
+      "Mint Leaves",
+      "Chaat Masala",
+      "Black Salt",
+      "Red Chilli Powder",
+      "Tamarind",
+      "Sev"
+    ]
+  },
+  {
+    "name": "Dahi Vada",
+    "rawMaterials": [
+      "Urad Dal",
+      "Curd",
+      "Tamarind",
+      "Cumin Powder",
+      "Red Chilli Powder",
+      "Black Salt",
+      "Chaat Masala",
+      "Coriander Leaves",
+      "Mint Leaves",
+      "Salt",
+      "Cooking Oil"
+    ]
+  },
+  {
+    "name": "Papdi Chaat",
+    "rawMaterials": [
+      "Maida",
+      "Curd",
+      "Potato",
+      "Onion",
+      "Tomato",
+      "Boondi",
+      "Sev",
+      "Tamarind",
+      "Mint Leaves",
+      "Coriander Leaves",
+      "Chaat Masala",
+      "Black Salt",
+      "Red Chilli Powder",
+      "Cooking Oil"
+    ]
+  },
+  {
+    "name": "Boondi Raita",
+    "rawMaterials": [
+      "Curd",
+      "Boondi",
+      "Salt",
+      "Cumin Powder",
+      "Red Chilli Powder",
+      "Coriander Leaves"
+    ]
+  },
+  {
+    "name": "Mix Veg Raita",
+    "rawMaterials": [
+      "Curd",
+      "Cucumber",
+      "Carrot",
+      "Onion",
+      "Tomato",
+      "Coriander Leaves",
+      "Cumin Powder",
+      "Black Salt",
+      "Salt"
+    ]
+  },
+  {
+    "name": "Cucumber Raita",
+    "rawMaterials": [
+      "Curd",
+      "Cucumber",
+      "Cumin Powder",
+      "Black Salt",
+      "Salt",
+      "Coriander Leaves"
+    ]
+  },
+  {
+    "name": "Pineapple Raita",
+    "rawMaterials": [
+      "Curd",
+      "Sugar",
+      "Cumin Powder",
+      "Black Salt",
+      "Salt"
+    ]
+  },
+  {
+    "name": "Green Salad",
+    "rawMaterials": [
+      "Cucumber",
+      "Tomato",
+      "Onion",
+      "Carrot",
+      "Lemon",
+      "Black Salt"
+    ]
+  },
+  {
+    "name": "Russian Salad",
+    "rawMaterials": [
+      "Potato",
+      "Carrot",
+      "Green Peas",
+      "Mayonnaise",
+      "Sweet Corn",
+      "Salt",
+      "Black Pepper"
+    ]
+  },
+  {
+    "name": "Fruit Salad",
+    "rawMaterials": [
+      "Apple",
+      "Banana",
+      "Pineapple",
+      "Grapes",
+      "Orange",
+      "Cream",
+      "Sugar"
+    ]
+  },
+  {
+    "name": "Gulab Jamun",
+    "rawMaterials": [
+      "Khoya",
+      "Maida",
+      "Sugar",
+      "Milk",
+      "Cardamom",
+      "Cooking Oil"
+    ]
+  },
+  {
+    "name": "Kala Jamun",
+    "rawMaterials": [
+      "Khoya",
+      "Maida",
+      "Sugar",
+      "Milk",
+      "Cardamom",
+      "Cooking Oil"
+    ]
+  },
+  {
+    "name": "Gajar Halwa",
+    "rawMaterials": [
+      "Carrot",
+      "Milk",
+      "Sugar",
+      "Khoya",
+      "Ghee",
+      "Cashew",
+      "Almond",
+      "Cardamom"
+    ]
+  },
+  {
+    "name": "Moong Dal Halwa",
+    "rawMaterials": [
+      "Moong Dal",
+      "Sugar",
+      "Ghee",
+      "Milk",
+      "Cashew",
+      "Almond",
+      "Cardamom"
+    ]
+  },
+  {
+    "name": "Badam Halwa",
+    "rawMaterials": [
+      "Almond",
+      "Sugar",
+      "Ghee",
+      "Milk",
+      "Cardamom"
+    ]
+  },
+  {
+    "name": "Rice Kheer",
+    "rawMaterials": [
+      "Basmati Rice",
+      "Milk",
+      "Sugar",
+      "Cardamom",
+      "Cashew",
+      "Almond",
+      "Raisins"
+    ]
+  },
+  {
+    "name": "Vermicelli Kheer",
+    "rawMaterials": [
+      "Vermicelli",
+      "Milk",
+      "Sugar",
+      "Cardamom",
+      "Cashew",
+      "Almond",
+      "Raisins",
+      "Ghee"
+    ]
+  },
+  {
+    "name": "Seviyan",
+    "rawMaterials": [
+      "Vermicelli",
+      "Milk",
+      "Sugar",
+      "Cardamom",
+      "Cashew",
+      "Almond",
+      "Raisins",
+      "Ghee"
+    ]
+  },
+  {
+    "name": "Besan Halwa",
+    "rawMaterials": [
+      "Besan",
+      "Sugar",
+      "Ghee",
+      "Milk",
+      "Cardamom",
+      "Cashew",
+      "Almond"
+    ]
+  },
+  {
+    "name": "Suji Halwa",
+    "rawMaterials": [
+      "Suji",
+      "Sugar",
+      "Ghee",
+      "Cardamom",
+      "Cashew",
+      "Raisins"
+    ]
+  },
+  {
+    "name": "Besan Ladoo",
+    "rawMaterials": [
+      "Besan",
+      "Sugar",
+      "Ghee",
+      "Cardamom",
+      "Almond"
+    ]
+  },
+  {
+    "name": "Motichoor Ladoo",
+    "rawMaterials": [
+      "Besan",
+      "Sugar",
+      "Ghee",
+      "Cardamom",
+      "Pistachio",
+      "Almond"
+    ]
+  },
+  {
+    "name": "Coconut Ladoo",
+    "rawMaterials": [
+      "Desiccated Coconut",
+      "Condensed Milk",
+      "Cardamom"
+    ]
+  },
+  {
+    "name": "Kaju Katli",
+    "rawMaterials": [
+      "Cashew",
+      "Sugar",
+      "Cardamom"
+    ]
+  },
+  {
+    "name": "Rasmalai",
+    "rawMaterials": [
+      "Paneer",
+      "Milk",
+      "Sugar",
+      "Cardamom",
+      "Saffron",
+      "Pistachio",
+      "Almond"
+    ]
+  },
+  {
+    "name": "Rasgulla",
+    "rawMaterials": [
+      "Paneer",
+      "Sugar",
+      "Cardamom"
+    ]
+  },
+  {
+    "name": "Shahi Tukda",
+    "rawMaterials": [
+      "Bread Crumbs",
+      "Milk",
+      "Sugar",
+      "Cream",
+      "Cardamom",
+      "Saffron",
+      "Cashew",
+      "Almond",
+      "Pistachio",
+      "Ghee"
+    ]
+  },
+  {
+    "name": "Custard",
+    "rawMaterials": [
+      "Milk",
+      "Custard Powder",
+      "Sugar",
+      "Apple",
+      "Banana",
+      "Grapes"
+    ]
+  },
+  {
+    "name": "Chocolate Custard",
+    "rawMaterials": [
+      "Milk",
+      "Custard Powder",
+      "Sugar",
+      "Chocolate"
+    ]
+  },
+  {
+    "name": "Fruit Cream",
+    "rawMaterials": [
+      "Cream",
+      "Sugar",
+      "Apple",
+      "Banana",
+      "Grapes"
+    ]
+  },
+  {
+    "name": "Masala Papad",
+    "rawMaterials": [
+      "Papad",
+      "Onion",
+      "Tomato",
+      "Green Chilli",
+      "Coriander Leaves",
+      "Chaat Masala",
+      "Red Chilli Powder",
+      "Lemon"
+    ]
+  },
+  {
+    "name": "Aloo Papad",
+    "rawMaterials": [
+      "Papad",
+      "Potato",
+      "Onion",
+      "Green Chilli",
+      "Coriander Leaves",
+      "Chaat Masala",
+      "Red Chilli Powder",
+      "Lemon"
+    ]
+  },
+  {
+    "name": "Paneer Pakora",
+    "rawMaterials": [
+      "Paneer",
+      "Besan",
+      "Rice Flour",
+      "Ginger",
+      "Garlic",
+      "Green Chilli",
+      "Red Chilli Powder",
+      "Turmeric Powder",
+      "Coriander Powder",
+      "Salt",
+      "Cooking Oil"
+    ]
+  },
+  {
+    "name": "Onion Pakora",
+    "rawMaterials": [
+      "Onion",
+      "Besan",
+      "Rice Flour",
+      "Green Chilli",
+      "Coriander Leaves",
+      "Red Chilli Powder",
+      "Cumin Seeds",
+      "Salt",
+      "Cooking Oil"
+    ]
+  },
+  {
+    "name": "Aloo Pakora",
+    "rawMaterials": [
+      "Potato",
+      "Besan",
+      "Rice Flour",
+      "Green Chilli",
+      "Red Chilli Powder",
+      "Turmeric Powder",
+      "Coriander Leaves",
+      "Salt",
+      "Cooking Oil"
+    ]
+  },
+  {
+    "name": "Bread Pakora",
+    "rawMaterials": [
+      "Bread Crumbs",
+      "Potato",
+      "Besan",
+      "Green Chilli",
+      "Ginger",
+      "Coriander Leaves",
+      "Red Chilli Powder",
+      "Cumin Seeds",
+      "Salt",
+      "Cooking Oil"
+    ]
+  },
+  {
+    "name": "Veg Sandwich",
+    "rawMaterials": [
+      "Bread Crumbs",
+      "Potato",
+      "Onion",
+      "Tomato",
+      "Cucumber",
+      "Capsicum",
+      "Cheese",
+      "Mayonnaise",
+      "Black Pepper",
+      "Salt"
+    ]
+  },
+  {
+    "name": "Cheese Sandwich",
+    "rawMaterials": [
+      "Bread Crumbs",
+      "Cheese",
+      "Mayonnaise",
+      "Capsicum",
+      "Onion",
+      "Tomato",
+      "Black Pepper",
+      "Salt"
+    ]
+  },
+  {
+    "name": "Pav Bhaji",
+    "rawMaterials": [
+      "Pav Bhaji Masala",
+      "Potato",
+      "Cauliflower",
+      "Green Peas",
+      "Carrot",
+      "Capsicum",
+      "Tomato",
+      "Onion",
+      "Ginger",
+      "Garlic",
+      "Green Chilli",
+      "Butter",
+      "Coriander Leaves",
+      "Red Chilli Powder",
+      "Salt"
+    ]
+  },
+  {
+    "name": "Aloo Chaat",
+    "rawMaterials": [
+      "Potato",
+      "Onion",
+      "Tomato",
+      "Green Chilli",
+      "Coriander Leaves",
+      "Tamarind",
+      "Chaat Masala",
+      "Cumin Powder",
+      "Red Chilli Powder",
+      "Black Salt",
+      "Lemon"
+    ]
+  },
+  {
+    "name": "Chana Chaat",
+    "rawMaterials": [
+      "Kabuli Chana",
+      "Onion",
+      "Tomato",
+      "Green Chilli",
+      "Coriander Leaves",
+      "Mint Leaves",
+      "Tamarind",
+      "Chaat Masala",
+      "Cumin Powder",
+      "Red Chilli Powder",
+      "Black Salt",
+      "Lemon"
+    ]
+  },
+  {
+    "name": "Sweet Corn Chaat",
+    "rawMaterials": [
+      "Sweet Corn",
+      "Onion",
+      "Tomato",
+      "Capsicum",
+      "Coriander Leaves",
+      "Chaat Masala",
+      "Black Salt",
+      "Red Chilli Powder",
+      "Lemon"
+    ]
+  },
+  {
+    "name": "Paneer Chilli Dry",
+    "rawMaterials": [
+      "Paneer",
+      "Capsicum",
+      "Onion",
+      "Garlic",
+      "Ginger",
+      "Green Chilli",
+      "Soy Sauce",
+      "Red Chilli Sauce",
+      "Vinegar",
+      "Corn Flour",
+      "Black Pepper",
+      "Salt",
+      "Cooking Oil"
+    ]
+  },
+  {
+    "name": "Honey Chilli Potato",
+    "rawMaterials": [
+      "Potato",
+      "Corn Flour",
+      "Maida",
+      "Honey",
+      "Red Chilli Sauce",
+      "Soy Sauce",
+      "Vinegar",
+      "Sesame Seeds",
+      "Garlic",
+      "Green Chilli",
+      "Salt",
+      "Cooking Oil"
+    ]
+  },
+  {
+    "name": "American Chopsuey",
+    "rawMaterials": [
+      "Noodles",
+      "Cabbage",
+      "Carrot",
+      "Capsicum",
+      "Onion",
+      "Tomato Ketchup",
+      "Red Chilli Sauce",
+      "Soy Sauce",
+      "Corn Flour",
+      "Vinegar",
+      "Sugar",
+      "Salt",
+      "Cooking Oil"
+    ]
+  }
+]
