@@ -90,9 +90,9 @@ export const loginUser = asyncHandler(
       {
         httpOnly: true,
         secure:
-          process.env.NODE_ENV === 'production',
+          process.env.NODE_ENV === 'development',
         sameSite:
-          process.env.NODE_ENV === 'production'
+          process.env.NODE_ENV === 'development'
             ? 'none'
             : 'lax',
         maxAge:
