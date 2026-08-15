@@ -59,7 +59,6 @@ app.listen(PORT, '0.0.0.0', () => {
 ╠══════════════════════════════════════════════╣
 ║  📍 Port: ${PORT}                              ║
 ║  🌍 Environment: ${(process.env.NODE_ENV || 'development').padEnd(26)} ║
-║  📦 Models: ${String(modelNames.length).padEnd(31)} ║
 ║  🛣️  API Base: http://localhost:${PORT}/api      ║
 ║  ❤️  Health: http://localhost:${PORT}/api/health ║
 ╚══════════════════════════════════════════════╝
