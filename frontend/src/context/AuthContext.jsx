@@ -188,9 +188,9 @@ export const AuthProvider = ({ children }) => {
   // INITIAL AUTH CHECK
   // =========================================================
 
-  //useEffect(() => {
-  //  checkAuth();
-  //}, []);
+  useEffect(() => {
+    checkAuth();
+  }, []);
 
   // =========================================================
   // AUTH VALUES
