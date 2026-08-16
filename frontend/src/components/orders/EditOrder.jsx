@@ -1,7 +1,8 @@
 // src/components/orders/EditOrder.jsx
-import { useState, useMemo } from "react";
-import { FiX, FiCalendar, FiUser, FiPhone, FiMapPin } from "react-icons/fi";
-import { useUpdateOrder } from "../../hooks/useOrders.js";
+import { useState, useMemo, useEffect } from "react";
+import { useNavigate, useParams } from "react-router-dom";
+import { FiX, FiCalendar, FiUser, FiPhone, FiMapPin, FiArrowLeft, FiCheck, FiClock } from "react-icons/fi";
+import { useOrder, useUpdateOrder } from "../../hooks/useOrders.js";
 
 const getTodayDate = () => {
   const today = new Date();
@@ -14,6 +15,7 @@ const getTodayDate = () => {
 const formatDateForInput = (date) => {
   if (!date) return getTodayDate();
   const value = new Date(date);
+  if (isNaN(value.getTime())) return getTodayDate();
   const year = value.getFullYear();
   const month = String(value.getMonth() + 1).padStart(2, "0");
   const day = String(value.getDate()).padStart(2, "0");
@@ -29,10 +31,48 @@ const buildFormFromOrder = (order) => ({
   status: order?.status || "Pending",
 });
 
-export default function EditOrder({ order, onClose, onOrderUpdated }) {
+export default function EditOrder({ order: propOrder, onClose: propOnClose, onOrderUpdated }) {
+  const navigate = useNavigate();
+  const { id: paramId } = useParams();
+
+  const isRouteMode = !propOrder && Boolean(paramId);
+  const targetId = propOrder?._id || paramId;
+
+  // If in route mode and no propOrder provided, fetch order via hook
+  const { data: fetchedOrder, isLoading: orderLoading, isError: orderIsError, error: orderFetchError } = useOrder(isRouteMode ? targetId : null);
+
+  const activeOrder = propOrder || fetchedOrder;
   const updateOrder = useUpdateOrder();
-  const [form, setForm] = useState(() => buildFormFromOrder(order));
+
+  const [form, setForm] = useState(() => buildFormFromOrder(activeOrder));
   const [error, setError] = useState("");
+
+  // Sync form if activeOrder loads later (in route mode)
+  useEffect(() => {
+    if (activeOrder) {
+      setForm(buildFormFromOrder(activeOrder));
+    }
+  }, [activeOrder]);
+
+  // Handle Close safely (modal onClose prop OR route navigation)
+  const handleClose = () => {
+    if (propOnClose) {
+      propOnClose();
+    } else {
+      navigate(-1);
+    }
+  };
+
+  // Close on Escape key
+  useEffect(() => {
+    const handleKeyDown = (e) => {
+      if (e.key === "Escape" && !updateOrder.isPending) {
+        handleClose();
+      }
+    };
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [updateOrder.isPending]);
 
   const handleChange = (event) => {
     const { name, value } = event.target;
@@ -42,7 +82,7 @@ export default function EditOrder({ order, onClose, onOrderUpdated }) {
     }));
   };
 
-  // Event duration in days
+  // Event duration in days calculation
   const eventDuration = useMemo(() => {
     if (!form.startDate || !form.endDate) return null;
     const start = new Date(form.startDate);
@@ -56,12 +96,12 @@ export default function EditOrder({ order, onClose, onOrderUpdated }) {
     event.preventDefault();
 
     if (!form.startDate) {
-      setError("Starting date is required");
+      setError("Event start date is required");
       return;
     }
 
     if (form.endDate < form.startDate) {
-      setError("Ending date cannot be before starting date");
+      setError("Event end date cannot be earlier than start date");
       return;
     }
 
@@ -76,18 +116,18 @@ export default function EditOrder({ order, onClose, onOrderUpdated }) {
     }
 
     if (!form.address.trim()) {
-      setError("Address is required");
+      setError("Venue address is required");
       return;
     }
 
     try {
       setError("");
 
-      const updatedOrder = await updateOrder.mutateAsync({
-        id: order._id,
+      const updated = await updateOrder.mutateAsync({
+        id: targetId,
         data: {
           startDate: form.startDate,
-          endDate: form.endDate,
+          endDate: form.endDate || form.startDate,
           clientName: form.clientName.trim(),
           phone: form.phone.trim(),
           address: form.address.trim(),
@@ -95,54 +135,75 @@ export default function EditOrder({ order, onClose, onOrderUpdated }) {
         },
       });
 
-      onOrderUpdated?.(updatedOrder);
-      onClose();
+      if (onOrderUpdated) {
+        onOrderUpdated(updated);
+      }
+
+      handleClose();
     } catch (submitError) {
       console.error("Update order error:", submitError);
-      setError(submitError.response?.data?.message || "Failed to update order");
+      setError(submitError.response?.data?.message || "Failed to update order details");
     }
   };
 
+  // Route mode loading state
+  if (isRouteMode && orderLoading) {
+    return (
+      <div className="flex min-h-[60vh] flex-col items-center justify-center py-20">
+        <div className="h-9 w-9 animate-spin rounded-full border-4 border-slate-200 border-t-slate-900" />
+        <p className="mt-4 text-sm font-medium text-slate-500">Loading order details for editing...</p>
+      </div>
+    );
+  }
+
+  // Route mode error state
+  if (isRouteMode && (orderIsError || !activeOrder)) {
+    return (
+      <div className="mx-auto max-w-xl py-12">
+        <div className="rounded-2xl border border-red-200 bg-red-50 p-6 text-center">
+          <p className="text-base font-semibold text-red-700">Order Not Found</p>
+          <p className="mt-1 text-sm text-red-500">{orderFetchError?.response?.data?.message || "The requested order could not be loaded for editing."}</p>
+          <button
+            type="button"
+            onClick={() => navigate("/admin/orders")}
+            className="mt-4 inline-flex items-center gap-2 rounded-xl bg-slate-900 px-4 py-2 text-sm font-semibold text-white transition hover:bg-slate-800"
+          >
+            <FiArrowLeft /> Back to Orders
+          </button>
+        </div>
+      </div>
+    );
+  }
+
   return (
-    <div
-      className="fixed inset-0 z-50 flex items-center justify-center bg-slate-950/60 p-4 backdrop-blur-xs"
-      onMouseDown={onClose}
-    >
-      <div
-        className="w-full max-w-xl overflow-hidden rounded-2xl bg-white shadow-2xl transition-all"
-        onMouseDown={(event) => event.stopPropagation()}
-      >
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-slate-950/60 p-4 backdrop-blur-xs" onMouseDown={handleClose}>
+      <div className="w-full max-w-xl overflow-hidden rounded-2xl bg-white shadow-2xl transition-all" onMouseDown={(event) => event.stopPropagation()}>
         {/* Modal Header */}
         <div className="flex items-center justify-between border-b border-slate-200 px-6 py-4">
           <div>
             <h2 className="text-lg font-bold text-slate-900">Edit Catering Order</h2>
-            <p className="text-xs text-slate-500">Update event schedule, client info, or order status</p>
+            <p className="text-xs text-slate-500">Update event dates, client info, or order status</p>
           </div>
 
           <button
             type="button"
-            onClick={onClose}
+            onClick={handleClose}
             disabled={updateOrder.isPending}
-            className="rounded-xl p-2 text-slate-400 transition hover:bg-slate-100 hover:text-slate-700"
+            className="rounded-xl p-2 text-slate-400 transition hover:bg-slate-100 hover:text-slate-700 disabled:opacity-50"
+            title="Close (Esc)"
           >
             <FiX size={18} />
           </button>
         </div>
 
         {/* Error alert */}
-        {error && (
-          <div className="mx-6 mt-4 rounded-xl border border-red-200 bg-red-50 px-4 py-2.5 text-sm font-medium text-red-600">
-            {error}
-          </div>
-        )}
+        {error && <div className="mx-6 mt-4 rounded-xl border border-red-200 bg-red-50 px-4 py-2.5 text-sm font-medium text-red-600">{error}</div>}
 
         <form onSubmit={handleSubmit} className="space-y-4 p-6">
           {/* Event Dates & Duration */}
           <div className="rounded-xl border border-slate-200/80 bg-slate-50/50 p-4">
             <div className="mb-2 flex items-center justify-between">
-              <label className="text-xs font-bold uppercase tracking-wider text-slate-700">
-                Event Schedule
-              </label>
+              <label className="text-xs font-bold uppercase tracking-wider text-slate-700">Event Schedule</label>
               {eventDuration && (
                 <span className="rounded-full bg-slate-900 px-2.5 py-0.5 text-[11px] font-bold text-white">
                   {eventDuration} {eventDuration === 1 ? "Day Event" : "Days Event"}
@@ -152,19 +213,24 @@ export default function EditOrder({ order, onClose, onOrderUpdated }) {
 
             <div className="grid gap-3 sm:grid-cols-2">
               <div>
-                <span className="mb-1 block text-xs font-medium text-slate-500">Start Date</span>
+                <span className="mb-1 block text-xs font-medium text-slate-500">
+                  Start Date <span className="text-red-500">*</span>
+                </span>
                 <input
                   type="date"
                   name="startDate"
                   value={form.startDate}
                   onChange={handleChange}
                   disabled={updateOrder.isPending}
+                  required
                   className="w-full rounded-xl border border-slate-300 bg-white px-3.5 py-2.5 text-sm text-slate-900 outline-none transition focus:border-slate-950 focus:ring-2 focus:ring-slate-950/10"
                 />
               </div>
 
               <div>
-                <span className="mb-1 block text-xs font-medium text-slate-500">End Date</span>
+                <span className="mb-1 block text-xs font-medium text-slate-500">
+                  End Date <span className="text-red-500">*</span>
+                </span>
                 <input
                   type="date"
                   name="endDate"
@@ -172,6 +238,7 @@ export default function EditOrder({ order, onClose, onOrderUpdated }) {
                   value={form.endDate}
                   onChange={handleChange}
                   disabled={updateOrder.isPending}
+                  required
                   className="w-full rounded-xl border border-slate-300 bg-white px-3.5 py-2.5 text-sm text-slate-900 outline-none transition focus:border-slate-950 focus:ring-2 focus:ring-slate-950/10"
                 />
               </div>
@@ -231,9 +298,7 @@ export default function EditOrder({ order, onClose, onOrderUpdated }) {
 
           {/* Status */}
           <div>
-            <label className="mb-1.5 block text-xs font-bold uppercase tracking-wider text-slate-700">
-              Order Status
-            </label>
+            <label className="mb-1.5 block text-xs font-bold uppercase tracking-wider text-slate-700">Order Status</label>
             <select
               name="status"
               value={form.status}
@@ -252,7 +317,7 @@ export default function EditOrder({ order, onClose, onOrderUpdated }) {
           <div className="flex justify-end gap-3 border-t border-slate-100 pt-4">
             <button
               type="button"
-              onClick={onClose}
+              onClick={handleClose}
               disabled={updateOrder.isPending}
               className="rounded-xl border border-slate-200 px-4 py-2.5 text-sm font-semibold text-slate-700 hover:bg-slate-50 disabled:opacity-50"
             >
@@ -262,9 +327,18 @@ export default function EditOrder({ order, onClose, onOrderUpdated }) {
             <button
               type="submit"
               disabled={updateOrder.isPending}
-              className="rounded-xl bg-slate-950 px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:bg-slate-800 disabled:cursor-not-allowed disabled:opacity-50"
+              className="inline-flex items-center gap-2 rounded-xl bg-slate-950 px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:bg-slate-800 disabled:cursor-not-allowed disabled:opacity-50"
             >
-              {updateOrder.isPending ? "Saving..." : "Save Changes"}
+              {updateOrder.isPending ?
+                <>
+                  <span className="h-4 w-4 animate-spin rounded-full border-2 border-white border-t-transparent" />
+                  <span>Saving...</span>
+                </>
+              : <>
+                  <FiCheck />
+                  <span>Save Changes</span>
+                </>
+              }
             </button>
           </div>
         </form>

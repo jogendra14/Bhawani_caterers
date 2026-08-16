@@ -57,14 +57,27 @@ export function useUpdateOrder() {
   const queryClient = useQueryClient();
 
   return useMutation({
-    mutationFn: ({ id, data }) => orderApi.updateOrder({ id, data }),
+    mutationFn: ({ id, data }) =>
+      orderApi.updateOrder({ id, data }),
+
     onSuccess: (updatedOrder, variables) => {
-      queryClient.invalidateQueries({ queryKey: orderKeys.all });
-      queryClient.invalidateQueries({ queryKey: orderKeys.detail(variables.id) });
+      // Orders list refresh
+      queryClient.invalidateQueries({
+        queryKey: orderKeys.all,
+      });
+
+      // Current order detail refresh
+      queryClient.invalidateQueries({
+        queryKey: orderKeys.detail(variables.id),
+      });
+
       toast.success("Order updated successfully!");
     },
+
     onError: (error) => {
-      const message = error.response?.data?.message || "Failed to update order";
+      const message =
+        error.response?.data?.message || "Failed to update order";
+
       toast.error(message);
     },
   });
@@ -76,8 +89,10 @@ export function useDeleteOrder() {
 
   return useMutation({
     mutationFn: (id) => orderApi.deleteOrder(id),
-    onSuccess: () => {
+    onSuccess: (data, id) => {
       queryClient.invalidateQueries({ queryKey: orderKeys.all });
+      queryClient.invalidateQueries({ queryKey: orderKeys.detail(id) });
+      queryClient.invalidateQueries({ queryKey: orderKeys.menu(id) });
       toast.success("Order deleted successfully!");
     },
     onError: (error) => {
