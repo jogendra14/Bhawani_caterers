@@ -342,7 +342,7 @@ export default function OrderDetail() {
       </div>
 
       {/* Edit Order Modal */}
-      {isEditModalOpen && <EditOrder order={order} onClose={() => setIsEditModalOpen(false)} onOrderUpdated={() => setIsEditModalOpen(false)} />}
+      {isEditModalOpen && <EditOrder order={order} onClose={() => setIsEditModalOpen(false)} />}
     </div>
   );
 }

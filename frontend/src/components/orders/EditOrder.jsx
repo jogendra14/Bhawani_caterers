@@ -123,7 +123,7 @@ export default function EditOrder({ order: propOrder, onClose: propOnClose, onOr
     try {
       setError("");
 
-      const updated = await updateOrder.mutateAsync({
+      await updateOrder.mutateAsync({
         id: targetId,
         data: {
           startDate: form.startDate,
@@ -134,10 +134,6 @@ export default function EditOrder({ order: propOrder, onClose: propOnClose, onOr
           status: form.status,
         },
       });
-
-      if (onOrderUpdated) {
-        onOrderUpdated(updated);
-      }
 
       handleClose();
     } catch (submitError) {

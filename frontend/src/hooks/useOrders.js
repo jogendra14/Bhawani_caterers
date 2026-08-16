@@ -61,14 +61,20 @@ export function useUpdateOrder() {
       orderApi.updateOrder({ id, data }),
 
     onSuccess: (updatedOrder, variables) => {
-      // Orders list refresh
-      queryClient.invalidateQueries({
-        queryKey: orderKeys.all,
-      });
+      // Immediately update OrderDetail cache
+      queryClient.setQueryData(
+        orderKeys.detail(variables.id),
+        updatedOrder
+      );
 
-      // Current order detail refresh
+      // Refetch from server to ensure latest DB data
       queryClient.invalidateQueries({
         queryKey: orderKeys.detail(variables.id),
+      });
+
+      // Refresh order list
+      queryClient.invalidateQueries({
+        queryKey: orderKeys.all,
       });
 
       toast.success("Order updated successfully!");
