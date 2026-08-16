@@ -10,16 +10,14 @@ import OrderMenu from "../models/OrderMenu.js";
 export const saveOrderMenu = async (req, res) => {
   try {
     const { orderId } = req.params;
-    const { days } = req.body;
+    const { days } = req.body || {};
 
     console.log("Order ID:", orderId);
     console.log("Days:", days);
 
-    /*
-    |--------------------------------------------------------------------------
-    | CHECK ORDER
-    |--------------------------------------------------------------------------
-    */
+    // ---------------------------------------------------------
+    // CHECK ORDER
+    // ---------------------------------------------------------
 
     const order = await Order.findById(orderId);
 
@@ -30,11 +28,9 @@ export const saveOrderMenu = async (req, res) => {
       });
     }
 
-    /*
-    |--------------------------------------------------------------------------
-    | VALIDATION
-    |--------------------------------------------------------------------------
-    */
+    // ---------------------------------------------------------
+    // VALIDATION
+    // ---------------------------------------------------------
 
     if (!Array.isArray(days)) {
       return res.status(400).json({
@@ -43,40 +39,53 @@ export const saveOrderMenu = async (req, res) => {
       });
     }
 
-    /*
-    |--------------------------------------------------------------------------
-    | CLEAN DATA
-    |--------------------------------------------------------------------------
-    */
+    // ---------------------------------------------------------
+    // CLEAN DATA
+    // ---------------------------------------------------------
 
     const cleanedDays = days.map((day) => ({
       day: day.day,
       date: day.date,
 
       times: {
-        Morning: (day.times?.Morning || []).map(
-          (item) => item._id || item
-        ),
+        Morning: {
+          persons: Number(day.times?.Morning?.persons || 0),
+          items: (day.times?.Morning?.items || []).map(
+            (item) => item._id || item
+          ),
+        },
 
-        Afternoon: (day.times?.Afternoon || []).map(
-          (item) => item._id || item
-        ),
+        Afternoon: {
+          persons: Number(day.times?.Afternoon?.persons || 0),
+          items: (day.times?.Afternoon?.items || []).map(
+            (item) => item._id || item
+          ),
+        },
 
-        Evening: (day.times?.Evening || []).map(
-          (item) => item._id || item
-        ),
+        Evening: {
+          persons: Number(day.times?.Evening?.persons || 0),
+          items: (day.times?.Evening?.items || []).map(
+            (item) => item._id || item
+          ),
+        },
 
-        Night: (day.times?.Night || []).map(
-          (item) => item._id || item
-        ),
+        Night: {
+          persons: Number(day.times?.Night?.persons || 0),
+          items: (day.times?.Night?.items || []).map(
+            (item) => item._id || item
+          ),
+        },
       },
     }));
 
-    /*
-    |--------------------------------------------------------------------------
-    | CREATE / UPDATE
-    |--------------------------------------------------------------------------
-    */
+    console.log(
+      "Cleaned Days:",
+      JSON.stringify(cleanedDays, null, 2)
+    );
+
+    // ---------------------------------------------------------
+    // CREATE / UPDATE
+    // ---------------------------------------------------------
 
     const orderMenu = await OrderMenu.findOneAndUpdate(
       {
@@ -93,18 +102,15 @@ export const saveOrderMenu = async (req, res) => {
       }
     );
 
-    /*
-    |--------------------------------------------------------------------------
-    | RESPONSE
-    |--------------------------------------------------------------------------
-    */
+    // ---------------------------------------------------------
+    // RESPONSE
+    // ---------------------------------------------------------
 
     return res.status(200).json({
       success: true,
       message: "Order menu saved successfully",
       orderMenu,
     });
-
   } catch (error) {
     console.error("Save order menu error:", error);
 
@@ -115,8 +121,6 @@ export const saveOrderMenu = async (req, res) => {
     });
   }
 };
-
-
 /*
 |--------------------------------------------------------------------------
 | GET ORDER MENU
@@ -130,7 +134,10 @@ export const getOrderMenu = async (req, res) => {
     const orderMenu = await OrderMenu.findOne({
       order: orderId,
     }).populate(
-      "days.times.Morning days.times.Afternoon days.times.Evening days.times.Night"
+      "days.times.Morning.items " +
+      "days.times.Afternoon.items " +
+      "days.times.Evening.items " +
+      "days.times.Night.items"
     );
 
     if (!orderMenu) {
@@ -144,7 +151,6 @@ export const getOrderMenu = async (req, res) => {
       success: true,
       orderMenu,
     });
-
   } catch (error) {
     console.error("Get order menu error:", error);
 

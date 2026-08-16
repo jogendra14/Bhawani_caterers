@@ -39,10 +39,16 @@ const orderApi = {
   },
 
   // Save/Update order menu
-  saveOrderMenu: async ({ orderId, data }) => {
-    const response = await API.put(`/orders/${orderId}/menu`, data);
-    return response.data?.orderMenu || null;
-  },
+saveOrderMenu: async ({ orderId, days }) => {
+  const response = await API.put(
+    `/orders/${orderId}/menu`,
+    {
+      days,
+    }
+  );
+
+  return response.data?.orderMenu || null;
+},
 };
 
 export default orderApi;

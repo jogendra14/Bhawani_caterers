@@ -4,11 +4,7 @@ import { FiSave, FiArrowLeft, FiCheck, FiPlus, FiX } from "react-icons/fi";
 import toast from "react-hot-toast";
 
 import { useItems } from "../../hooks/useItems.js";
-import {
-  useOrder,
-  useOrderMenu,
-  useSaveOrderMenu,
-} from "../../hooks/useOrders.js";
+import { useOrder, useOrderMenu, useSaveOrderMenu } from "../../hooks/useOrders.js";
 import { formatSavedMenuToDayDetails } from "../../utils/menuUtils.js";
 
 const times = ["Morning", "Afternoon", "Evening", "Night"];
@@ -17,12 +13,7 @@ const AddMenu = () => {
   const navigate = useNavigate();
   const { orderId } = useParams();
 
-  const {
-    data: order,
-    isLoading,
-    isError,
-    error: orderError,
-  } = useOrder(orderId);
+  const { data: order, isLoading, isError, error: orderError } = useOrder(orderId);
 
   const { data: savedMenu } = useOrderMenu(orderId);
   const { data: menuItems = [], isLoading: menuLoading } = useItems();
@@ -222,10 +213,7 @@ const AddMenu = () => {
   |--------------------------------------------------------------------------
   */
 
-const selectedItems =
-  selectedDay && selectedTime
-    ? dayDetails[selectedDay]?.times?.[selectedTime]?.items || []
-    : [];
+  const selectedItems = selectedDay && selectedTime ? dayDetails[selectedDay]?.times?.[selectedTime]?.items || [] : [];
   /*
   |--------------------------------------------------------------------------
   | SAVE MENU
@@ -262,9 +250,7 @@ const selectedItems =
   if ((isError || error) && !order) {
     return (
       <div className="flex min-h-screen items-center justify-center">
-        <div className="rounded-lg bg-red-50 p-5 text-red-600">
-          {error || orderError?.response?.data?.message || "Failed to fetch order"}
-        </div>
+        <div className="rounded-lg bg-red-50 p-5 text-red-600">{error || orderError?.response?.data?.message || "Failed to fetch order"}</div>
       </div>
     );
   }

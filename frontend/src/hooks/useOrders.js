@@ -92,13 +92,24 @@ export function useSaveOrderMenu() {
   const queryClient = useQueryClient();
 
   return useMutation({
-    mutationFn: ({ orderId, data }) => orderApi.saveOrderMenu({ orderId, data }),
+    mutationFn: ({ orderId, days }) =>
+      orderApi.saveOrderMenu({
+        orderId,
+        days,
+      }),
+
     onSuccess: (savedMenu, variables) => {
-      queryClient.invalidateQueries({ queryKey: orderKeys.menu(variables.orderId) });
+      queryClient.invalidateQueries({
+        queryKey: orderKeys.menu(variables.orderId),
+      });
+
       toast.success("Menu saved successfully!");
     },
+
     onError: (error) => {
-      const message = error.response?.data?.message || "Failed to save menu";
+      const message =
+        error.response?.data?.message || "Failed to save menu";
+
       toast.error(message);
     },
   });
